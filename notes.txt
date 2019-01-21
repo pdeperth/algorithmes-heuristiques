@@ -1,0 +1,3 @@
+liste de ville, distance entre les villes. 
+sur domaine -1:1, génération de nombres pseudo-aléatoires pour faire la lsite de villes.
+Suite de très grande période.

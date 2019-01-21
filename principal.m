@@ -11,5 +11,8 @@ scatter(liste_villes(:,1),liste_villes(:,2));
 
 distances_villes = distances(liste_villes);
 
-chemin = randperm(nb_villes)
-chemin = voisin(chemin)
+chemin1 = randperm(nb_villes);
+chemin2 = voisin(chemin);
+
+eva_chemin1 = evaluation(chemin1, distances_villes)
+eva_chemin2 = evaluation(chemin2, distances_villes)

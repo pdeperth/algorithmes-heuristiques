@@ -4,7 +4,7 @@ function [optimum, trajectoire] = recuit_simule(nbr_ville, distance_matrix, alph
     X_courant = X0;
     i = 0;
     while temperature(i,alpha,T0) > Tfroid
-        X_candidat = voisin(X0);
+        X_candidat = voisin(X_courant);
         delta_F = evaluation(X_candidat,distance_matrix) - evaluation(X_courant,distance_matrix);
         if delta_F < 0
             X_courant = X_candidat;
@@ -17,8 +17,8 @@ function [optimum, trajectoire] = recuit_simule(nbr_ville, distance_matrix, alph
                 X_courant = X_candidat;
                 trajectoire(end+1) = evaluation(X_courant,distance_matrix);
             end
+            i = i+1;
         end
-        i = i+1;
     end
     optimum = X_courant;
 

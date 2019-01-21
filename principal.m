@@ -14,5 +14,7 @@ distances_villes = distances(liste_villes);
 chemin1 = randperm(nb_villes);
 chemin2 = voisin(chemin);
 
-eva_chemin1 = evaluation(chemin1, distances_villes)
-eva_chemin2 = evaluation(chemin2, distances_villes)
+eva_chemin1 = evaluation(chemin1, distances_villes);
+eva_chemin2 = evaluation(chemin2, distances_villes);
+
+chemin_glouton = glouton(distances_villes)

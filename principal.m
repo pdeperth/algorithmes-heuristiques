@@ -19,7 +19,7 @@ eva_chemin2 = evaluation(chemin2, distances_villes);
 
 % algo glouton
 chemin_glouton = glouton(distances_villes);
-afficher_chemin(chemin_glouton, liste_villes);
+afficher_chemin(chemin_glouton, liste_villes, 1);
 
 % recuit simulé
 Tchaud = 30000000;
@@ -27,7 +27,7 @@ Tgel = 0.001;
 Npaliers = 100000;
 alpha = nthroot(Tgel/Tchaud, Npaliers)
 [chemin_recuit, evolution_recuit] = recuit_simule(nb_villes, distances_villes, alpha, Tchaud, Tgel);
-afficher_chemin(chemin_recuit, liste_villes);
+afficher_chemin(chemin_recuit, liste_villes, 0);
 figure;
 plot(evolution_recuit);
 

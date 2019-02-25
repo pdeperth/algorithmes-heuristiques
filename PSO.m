@@ -16,7 +16,7 @@ ylim([ymin ymax]);
 
 
 for i=1:N_part
-    if schaffer(X(1,i),X(2,i)) < fonction(X_global(1),X_global(2))
+    if fonction(X(1,i),X(2,i)) < fonction(X_global(1),X_global(2))
         X_global = X(:,i);
     end
 end
@@ -36,18 +36,18 @@ for k=1:itermax
     
     for j = 1:N_part
         if X_courant(1,j) > xmax
-            X_courant(1,j) = xmax - VX_courant(1,j);
+            X_courant(1,j) = 2*xmax - X_courant(1,j);
         else
             if X_courant(1,j) < xmin
-                X_courant(1,j) = xmin - VX_courant(1,j);
+                X_courant(1,j) = 2*xmin - X_courant(1,j);
             end
         end
         
         if X_courant(2,j) > ymax
-            X_courant(2,j) = ymax - VX_courant(2,j);
+            X_courant(2,j) = 2*ymax - X_courant(2,j);
         else
             if X_courant(2,j) < ymin
-                X_courant(2,j) = ymin - VX_courant(2,j);
+                X_courant(2,j) = 2*ymin - X_courant(2,j);
             end
         end
     end

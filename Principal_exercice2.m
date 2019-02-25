@@ -9,6 +9,6 @@
 % 
 % surf(X,Y,Z);
 
-PSO(0.2,1,2,-5,5,-5,5,500,100,@schaffer)
+[zglobal, xglobal] = PSO(0.2,1,2,-10,10,-10,10,500,5000,@ackley)
 
 
